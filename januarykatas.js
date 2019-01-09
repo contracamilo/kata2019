@@ -100,4 +100,6 @@ const positiveSum = (arr) => arr.reduce((value, accum) => accum > 0 ? value + ac
 var stringToNumber = (str) => Number(str);
 
 
-
+//Issue 7 --------------------------------------------------------------------------
+//Write function makeUpperCase.
+var makeUpperCase = (str) => str.toUpperCase()
