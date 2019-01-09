@@ -94,3 +94,10 @@ function positiveSum(arr) {
 const positiveSum = (arr) => arr.reduce((value, accum) => accum > 0 ? value + accum : value, 0)
 
 
+//Issue 6 --------------------------------------------------------------------------
+//We need a function that can transform a string into a number. What ways of achieving this do you know?
+
+var stringToNumber = (str) => Number(str);
+
+
+
