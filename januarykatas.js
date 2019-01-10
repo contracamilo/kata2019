@@ -106,7 +106,40 @@ var makeUpperCase = (str) => str.toUpperCase()
 
 
 //Issue 8 --------------------------------------------------------------------------
+
 //Bob needs a fast way to calculate the volume of a cuboid with three values: length, width and the height of the cuboid.
 //Write a function to help Bob with this calculation.
 
 const getVolumeOfCuboid = (length, width, height) => length*width*height;
+
+
+
+//Issue 9 --------------------------------------------------------------------------
+
+//We want to generate a function that computes the series starting from 0 and ending until the given number following the sequence:
+//0 1 3 6 10 15 21 28 36 45 55 ....
+//which is created by
+//0, 0+1, 0+1+2, 0+1+2+3, 0+1+2+3+4, 0+1+2+3+4+5, 0+1+2+3+4+5+6, 0+1+2+3+4+5+6+7 etc..
+
+
+
+function showSequence (count) {
+    let inpt = count
+    let arr = [0]
+
+    if(inpt > 0){
+        for(let i = 1; i < inpt + 1; i++){
+            arr.push(i)
+        }
+        let str = arr.join().replace(/,/g, '+');
+        let result = arr.reduce(function(a,b){return a+b},0)
+        return  `${str} = ${result}`
+    }
+    else if(inpt < 0){
+       return `${count}<0` 
+    }
+    else{
+	  	return `${count}=${count}`
+	  }
+  }
+
