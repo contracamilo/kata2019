@@ -178,3 +178,33 @@ const isSortedAndHow = array => {
     return ascending ? 'yes, ascending' : descending ? 'yes, descending' : 'no'
 }
 
+
+
+
+//Issue 11 --------------------------------------------------------------------------
+
+//Find the number with the most digits.
+//If two numbers in the argument array have the same number of digits, return the first one in the array.
+
+//MINE
+function findLongest(array){
+    let arr = array.map((x) => String(x))
+    let ln = arr.reduce((ac,acc) => ac > acc.length ? ac : acc.length, 0);
+    let result = arr.filter(most => most.length == ln);
+    return Number(result[0])
+  }
+
+
+//BEST SOLUTIONS
+// 1
+const findLongest = l => l
+  .reduce((a, b) => (`${b}`.length > `${a}`.length) ? b : a);  
+// 2
+function findLongest(array){
+    return array.reduce((res, curr) => (String(res).length < String(curr).length) ? curr : res);
+}
+
+
+//Issue 12 --------------------------------------------------------------------------
+
+
