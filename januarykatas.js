@@ -220,3 +220,38 @@ const friend = (friends) => friends.filter(f => f.length == 4);
 
 //Issue 13 --------------------------------------------------------------------------
 
+//- Tribonacci with initial values.
+//input ([1,1,1],10)
+// output [1,1,1,3,5,9,17,31,57,105]
+
+//mine
+const tribonacci = (signature,n) => {
+    let fib;
+   if(n == 0){
+       fib = []
+   }
+   else if(n == 1){
+       fib = [1]
+   }else{
+        fib = signature
+        for (var i = 3; i < n ;i++){
+           fib[i] = fib[i - 3] + fib[i - 2] + fib[i - 1]
+       }
+   }
+   return fib
+}
+
+//other solution
+function tribonacci(signature,n) {
+    const result = signature.slice(0, n);
+    while (result.length < n) {
+      result[result.length] = result.slice(-3).reduce((p,c) => p + c, 0);
+    }
+    return result;
+}
+
+
+
+//Issue 14 --------------------------------------------------------------------------
+
+
