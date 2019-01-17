@@ -70,3 +70,17 @@ function DNAStrand(dna){
     C: 'G',
     G: 'C',
   }
+
+/*Extra Issue 4 --------------------
+Count the same number used in all number generated in the series.
+
+function nbDig(n, d) {
+    let arr = []
+	  
+    for(let i = 0; i <= n; i++){
+         var k = i*i
+         arr.push(k)
+    }
+
+    return arr.map((x)=> String(x).match(/[0-9]/gi)).flat().filter((x) => x == d).length
+}
