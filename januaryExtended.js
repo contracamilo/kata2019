@@ -84,3 +84,40 @@ function nbDig(n, d) {
 
     return arr.map((x)=> String(x).match(/[0-9]/gi)).flat().filter((x) => x == d).length
 }
+
+
+
+
+/*Extra Issue 5 --------------------
+We want to know the index of the vowels in a given word, for example, there are two vowels in the word super (the second and fourth letters).
+
+So given a string "super", we should return a list of [2, 4].
+
+Some examples:
+Mmmm  => []
+Super => [2,4]
+Apple => [1,5]
+YoMama -> [1,2,4,6]
+NOTE: Vowels in this context refers to English Language Vowels - a e i o u y
+NOTE: this is indexed from [1..n] (not zero indexed!)
+*/
+
+let vowelIndices = (word) =>
+     word.split('').map((x) => (x.match(/[AEIOUY]/gi) ) ? x : 0 )
+              .map((x, index) => (x !== 0) ? (index + 1) : '').filter((x) => Number(x))
+
+//other solutions
+function vowelIndices(word,a=[]){
+    return (word.replace(/[aeiouy]/gi,(m,i)=>(a.push(i+1),m)),a)
+}
+
+
+function vowelIndices(word) {
+    var arr = [];
+    for(var i = 0; i < word.length; i++) {
+      if(/[aeioyu]/i.test(word[i])) {
+        arr.push(i+1);
+      }
+    }
+    return arr;
+  }
