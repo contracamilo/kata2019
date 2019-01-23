@@ -2,10 +2,10 @@
 //-------------------------------------------------------------------
 let dayArr = [ "Monday", "Tuesday", "Wedsnday", "Thuesday", "Friday", "Satuday", "Monday" ]
 let $date = new Date();
-let h  = ($date.getHours() > 12 ) ? Math.abs($date.getHours() - 12) : $date.getHours();
-let m  = $date.getMinutes()
+let h  = ($date.getHours() > 12 ) ? '0'+Math.abs($date.getHours() - 12) : '0'+$date.getHours()
+let m  = ($date.getMinutes() < 9) ? '0'+$date.getMinutes() : $date.getMinutes()
 let s  = $date.getSeconds()
-let pm = (h >= 12 ||  h <= 24) ? 'pm':'am'
+let pm = (h >= 12) ? 'pm':'am'
 
 const day_name =  (dt) => dayArr[dt.getDay()];
 
