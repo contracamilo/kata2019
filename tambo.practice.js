@@ -68,7 +68,7 @@ function reverseStr(str) {
   </body>
 </html>
 */
-/*----------------js
+/*----------------js */
 
 const divide = () => { 
     let valueOne =  Number(document.getElementById("valueOne").value);
