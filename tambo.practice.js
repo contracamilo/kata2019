@@ -43,3 +43,42 @@ function reverseStr(str) {
     return res.join('')
 
 }
+
+//Excersise 5
+/*----------------html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+     <h1>Multiply and divive me</h1>
+      Value 1: 
+      <input id="valueOne" type="text" name="fname" value=""/> 
+      Value 2:
+      <input id="valueTwo" type="text" name="fname" value="" /><br>
+      <input type="submit" onclick="divide()" value="Divide" />
+      <input type="submit" onclick="multiply()" value="Multiply" />
+    
+    <div id="result"></div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
+*/
+/*----------------js
+
+const divide = () => { 
+    let valueOne =  Number(document.getElementById("valueOne").value);
+    let valueTwo = Number(document.getElementById("valueTwo").value);
+    document.getElementById("result").innerHTML = (valueOne && valueTwo !== null) ? valueOne / valueTwo : 'Give me a number'
+}
+
+
+const multiply = () =>{
+    let valueOne =  Number(document.getElementById("valueOne").value);
+    let valueTwo = Number(document.getElementById("valueTwo").value);
+    document.getElementById("result").innerHTML = (valueOne && valueTwo !== null) ? valueOne * valueTwo : 'Give me a number'
+}
