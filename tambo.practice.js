@@ -2,7 +2,7 @@
 //-------------------------------------------------------------------
 let dayArr = [ "Monday", "Tuesday", "Wedsnday", "Thuesday", "Friday", "Satuday", "Monday" ]
 let $date = new Date();
-let h  = ($date.getHours() > 12 ) ? '0'+Math.abs($date.getHours() - 12) : '0'+$date.getHours()
+let h  = ($date.getHours() > 10 ) ? '0'+Math.abs($date.getHours() - 12) : '0'+$date.getHours()
 let m  = ($date.getMinutes() < 9) ? '0'+$date.getMinutes() : $date.getMinutes()
 let s  = $date.getSeconds()
 let pm = (h >= 12) ? 'pm':'am'
