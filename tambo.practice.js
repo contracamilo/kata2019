@@ -82,3 +82,16 @@ const multiply = () =>{
     let valueTwo = Number(document.getElementById("valueTwo").value);
     document.getElementById("result").innerHTML = (valueOne && valueTwo !== null) ? valueOne * valueTwo : 'Give me a number'
 }
+
+//Excersise 6 -----------------------------------------
+
+let hoy = new Date();
+let navidad = new Date(hoy.getFullYear(), 11, 25);
+let dia = 1000 * 60 * 60 * 24;
+hoy.getMonth() == 11 && hoy.getDate() > 25
+  ? navidad.setFullYear(navidad.getFullYear() + 1)
+  : "";
+console.log(
+  Math.ceil((navidad.getTime() - hoy.getTime()) / dia) +
+    "para la maldita y plastica Navidad"
+);
