@@ -2,12 +2,12 @@
 //-------------------------------------------------------------------
 let dayArr = [ "Monday", "Tuesday", "Wedsnday", "Thuesday", "Friday", "Satuday", "Monday" ]
 let $date = new Date();
-let h  = ($date.getHours() > 10 ) ? '0'+Math.abs($date.getHours() - 12) : '0'+$date.getHours()
+let h  = ($date.getHours() < 10 ) ? '0'+Math.abs($date.getHours() - 12) : $date.getHours()
 let m  = ($date.getMinutes() < 9) ? '0'+$date.getMinutes() : $date.getMinutes()
 let s  = $date.getSeconds()
 let pm = (h >= 12) ? 'pm':'am'
 
-const day_name =  (dt) => dayArr[dt.getDay()];
+const day_name =  (dt) => dayArr[dt.getDay() -1];
 
 let result = `today is ${day_name(new Date())}, Current time is: ${h}:${m}:${s}, ${pm}`
 console.log(result)
