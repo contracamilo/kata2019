@@ -38,8 +38,9 @@ function reverseStr(str) {
         r.push(arr[i])
         res.push(r.pop())
         res.shift()
-		let pro = res.join('')
-        console.log(pro)
+	let pro = res.join('')
+	setTimeout(console.log(pro), 1200);
+       
     }
     return res.join('')
 
