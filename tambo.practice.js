@@ -1,13 +1,13 @@
 //Excersise 1
 //-------------------------------------------------------------------
-let dayArr = [ "Monday", "Tuesday", "Wedsnday", "Thuesday", "Friday", "Satuday", "Monday" ]
+let dayArr = [ "Sunday", "Tuesday", "Wedsnday", "Thursday", "Friday", "Saturday", "Monday" ]
 let $date = new Date();
-let h  = ($date.getHours() < 10 ) ? '0'+Math.abs($date.getHours() - 12) : $date.getHours()
+let h  = ($date.getHours() > 12 ) ? '0'+Math.abs($date.getHours() - 12) : $date.getHours()
 let m  = ($date.getMinutes() < 9) ? '0'+$date.getMinutes() : $date.getMinutes()
-let s  = $date.getSeconds()
+let s  = ($date.getSeconds() < 9) ? '0'+$date.getSeconds() : $date.getSeconds()
 let pm = (h >= 12) ? 'pm':'am'
 
-const day_name =  (dt) => dayArr[dt.getDay() -1];
+const day_name =  (dt) => dayArr[dt.getDay()];
 
 let result = `today is ${day_name(new Date())}, Current time is: ${h}:${m}:${s}, ${pm}`
 console.log(result)
